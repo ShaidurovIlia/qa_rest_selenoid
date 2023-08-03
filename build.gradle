@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def slf4jVersion = "2.0.7"
+
+
+
+dependencies {
+    testImplementation (
+            "io.rest-assured:rest-assured:5.3.1",
+            "org.junit.jupiter:junit-jupiter:5.10.0-RC1",
+            "org.slf4j:slf4j-api:$slf4jVersion"
+    )
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
