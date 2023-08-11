@@ -1,8 +1,9 @@
-package tests;
+package simple;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import model.LoginBodyModel;
 import model.LoginResponseModel;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -11,6 +12,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
+@Tag("simple")
 public class ReqreslnExtendedTests {
 
     @Test

@@ -38,10 +38,13 @@ dependencies {
     )
 }
 
+test {
+    useJUnitPlatform()
+}
 
-task tests_test(type: Test) {
+task simple_test(type: Test) {
     useJUnitPlatform {
-        include("tests")
+        include("simple")
     }
 }
 

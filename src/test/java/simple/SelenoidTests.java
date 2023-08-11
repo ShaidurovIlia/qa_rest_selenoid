@@ -1,5 +1,6 @@
-package tests;
+package simple;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.get;
@@ -8,6 +9,7 @@ import static org.hamcrest.Matchers.hasKey;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Tag("simple")
 public class SelenoidTests {
     /*
         1. Make request to https://selenoid.autotests.cloud/status
